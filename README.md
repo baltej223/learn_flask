@@ -203,3 +203,7 @@ To reinforce your learning, here are some example projects you can try building 
 These projects will help you apply what you've learned and gain practical experience with Flask.
 
 This overview covers the basics of Flask and some advanced topics. As you continue your journey with Flask, you'll discover more features and techniques to enhance your web development skills. Happy coding!
+
+SW4gYXJvdW5kIDUwMDAwIHdvcmRzLCBUZWFjaCBtZSBmbGFzayBmcm9tIHNjcmF0Y2guIFlvdXIgdGVhY2hpbmcgc2hvdWxkIGluY2x1ZGUgYmFzaWNzIG9mIGZsYXNrLCB3b3JraW5nIG9mIGZsYXNrLCBkZWZpbmUgYmFzaWMgZnVuY3Rpb24gb2YgZmxhc2ssIGFuZCBhbHNvIGluY2x1ZGUgYWR2YW5jZSB0b3BpY3Mgb2YgZmxhc2sgd2l0aCBleGFtcGxlcw==
+
+```Made by Baltej Singh```
