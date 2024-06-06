@@ -11,14 +11,7 @@ Flask from scratch is quite a journey! Let's break it down step by step. We'll s
    - Request and Response Handling
    - Static Files
    - Using Forms
-4. Advanced Flask:
-   - Flask Extensions
-   - Database Integration (SQLAlchemy)
-   - Authentication and Authorization
-   - RESTful APIs
-   - Testing Flask Apps
-   - Deployment Options
-5. Example Projects
+4. Example Projects
 
 Let's dive in!
 
@@ -117,92 +110,6 @@ class MyForm(FlaskForm):
     submit = SubmitField('Submit')
 ```
 
-### 4. Advanced Flask
-
-#### Flask Extensions
-
-Flask has a rich ecosystem of extensions for various functionalities like authentication, database integration, and more.
-
-```python
-from flask_sqlalchemy import SQLAlchemy
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'
-db = SQLAlchemy(app)
-
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-
-    def __repr__(self):
-        return '<User %r>' % self.username
-```
-
-#### Database Integration (SQLAlchemy)
-
-SQLAlchemy is a popular SQL toolkit and Object-Relational Mapping (ORM) library for Python.
-
-```python
-@app.route('/users')
-def users():
-    users = User.query.all()
-    return render_template('users.html', users=users)
-```
-
-#### Authentication and Authorization
-
-Flask-Login extension can be used for managing user sessions and authentication.
-
-```python
-from flask_login import UserMixin
-
-class User(UserMixin, db.Model):
-    # User model definition
-```
-
-#### RESTful APIs
-
-Flask-RESTful extension simplifies the creation of REST APIs.
-
-```python
-from flask_restful import Resource, Api
-
-api = Api(app)
-
-class HelloWorld(Resource):
-    def get(self):
-        return {'hello': 'world'}
-
-api.add_resource(HelloWorld, '/')
-```
-
-#### Testing Flask Apps
-
-Flask provides tools for testing your applications, including Werkzeug's test client.
-
-```python
-def test_index_page():
-    with app.test_client() as client:
-        response = client.get('/')
-        assert response.status_code == 200
-        assert b'Index Page' in response.data
-```
-
-#### Deployment Options
-
-Flask applications can be deployed using various options like Heroku, AWS, or Docker.
-
-### 5. Example Projects
-
-To reinforce your learning, here are some example projects you can try building with Flask:
-- Blogging Platform
-- RESTful API for a Todo List
-- Online Store with User Authentication
-- Chat Application with WebSocket
-
-These projects will help you apply what you've learned and gain practical experience with Flask.
-
-This overview covers the basics of Flask and some advanced topics. As you continue your journey with Flask, you'll discover more features and techniques to enhance your web development skills. Happy coding!
 
 SW4gYXJvdW5kIDUwMDAwIHdvcmRzLCBUZWFjaCBtZSBmbGFzayBmcm9tIHNjcmF0Y2guIFlvdXIgdGVhY2hpbmcgc2hvdWxkIGluY2x1ZGUgYmFzaWNzIG9mIGZsYXNrLCB3b3JraW5nIG9mIGZsYXNrLCBkZWZpbmUgYmFzaWMgZnVuY3Rpb24gb2YgZmxhc2ssIGFuZCBhbHNvIGluY2x1ZGUgYWR2YW5jZSB0b3BpY3Mgb2YgZmxhc2sgd2l0aCBleGFtcGxlcw==
 
